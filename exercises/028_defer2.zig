@@ -18,20 +18,14 @@ pub fn main() void {
 fn printAnimal(animal: u8) void {
     std.debug.print("(", .{});
 
-    std.debug.print(") ", .{}); // <---- how?!
-
     if (animal == 'g') {
         std.debug.print("Goat", .{});
-        return;
-    }
-    if (animal == 'c') {
+    } else if (animal == 'c') {
         std.debug.print("Cat", .{});
-        return;
-    }
-    if (animal == 'd') {
+    } else if (animal == 'd') {
         std.debug.print("Dog", .{});
-        return;
+    } else {
+        std.debug.print("Unknown", .{});
     }
-
-    std.debug.print("Unknown", .{});
+    std.debug.print(") ", .{});
 }
